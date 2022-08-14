@@ -42,20 +42,26 @@ users.forEach((users) => console.log(users.name));
 
 //Exercise 3: map
 let newUsers = users.map((users) => {
-  return{name:users.name, score: users.score}
+  return { name: users.name, score: users.score };
 });
 
 console.log(newUsers);
 
 //Exercise 4: filter
 
-let usersOn = users.filter((users) => users.isActive === true);//can drop ===true
+let usersOn = users.filter((users) => users.isActive === true); //can drop ===true
 
 console.log(usersOn);
 
-
 //Exercise 5: sort
 
-users.sort((a, b)=> b.score - a.score);
+users.sort((a, b) => b.score - a.score); //swap for positive
 
 console.log(users);
+
+//Exercise 6: reduce
+
+let avgScore =
+  users.reduce((sum, users) => sum + users.score, 0) / users.length; //0 is starting point
+
+console.log(avgScore);

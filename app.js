@@ -38,4 +38,8 @@ let users = [
   }
 ];
 //iterates over array and grabs only name
-users.forEach(user => console.log(user.name));
+users.forEach(users => console.log(users.name));
+
+//Exercise 3: map
+
+users.map(users => console.log(users.name, users.score));

@@ -20,26 +20,35 @@ let users = [
   },
   {
     name: "Sam",
-    age:38,
-    score:94,
-    isActive:true
+    age: 38,
+    score: 94,
+    isActive: true,
   },
   {
-    name:"Merry",
-    age:36,
+    name: "Merry",
+    age: 36,
     score: 82,
-    isActive:true
+    isActive: true,
   },
   {
     name: "Pippin",
     age: 26,
     score: 77,
-    isActive: false
-  }
+    isActive: false,
+  },
 ];
 //iterates over array and grabs only name
-users.forEach(users => console.log(users.name));
+users.forEach((users) => console.log(users.name));
 
 //Exercise 3: map
+let newUsers = users.map((users) => {
+  return{name:users.name, score: users.score}
+});
 
-users.map(users => console.log(users.name, users.score));
+console.log(newUsers);
+
+//Exercise 4: filter
+
+let usersOn = users.filter((users) => users.isActive === true);//can drop ===true
+
+console.log(usersOn);

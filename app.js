@@ -52,3 +52,10 @@ console.log(newUsers);
 let usersOn = users.filter((users) => users.isActive === true);//can drop ===true
 
 console.log(usersOn);
+
+
+//Exercise 5: sort
+
+users.sort((a, b)=> b.score - a.score);
+
+console.log(users);
